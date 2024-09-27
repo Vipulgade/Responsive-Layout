@@ -1,0 +1,110 @@
+
+body{
+    border-radius: 20px;
+    line-height: 150%;
+    background-color: rgb(237, 207, 207);}
+.container > .box {
+    border: 1px solid #f7f5f5; /* Adds a border to see the grid items */
+    
+  }
+  
+  #box1 { grid-area: box1; 
+    background-color:darkgray;
+    text-align: center;
+    line-height: 80%;
+  
+    
+
+}
+  #box2 { grid-area: box2;  
+    
+    background-color:rgb(94, 163, 232);
+    text-align: center;
+    line-height: 320%;
+}
+  #box3 { grid-area: box3;
+    background-color: rgb(27, 27, 210);
+    
+    
+ }
+  #box4 { grid-area: box4;
+    background-color:dimgray;
+    text-align: center;
+    line-height: 320%;
+ }
+  #box5 { grid-area: box5;
+    background-color: rgb(185, 203, 237);
+    text-align: center;
+    line-height: 320%;
+}
+  #box6 { grid-area: box6;
+    background-color: darkgoldenrod;
+    text-align: center;
+    line-height: 320%;
+}
+  #box7 { grid-area: box7;
+    background-color: brown;
+    text-align: center;
+    line-height: 320%;
+ }
+  #box8{ grid-area: box8;
+    background-color: blueviolet;
+    text-align: center;
+    line-height: 320%;
+    
+
+}
+  @media only screen and (min-width:900px) {
+   
+    .container {
+        display: grid;
+        grid-template-areas: 
+            "box1 box1 box1"
+            "box3 box3 box3"
+            "box2 box2 box2"
+            "box6 box7 box8"
+            "box5 box5 box5"
+            "box4 box4 box4";
+            grid-template-rows: 30% 30% 30%;
+    }
+  }
+  
+  
+  @media only screen and (min-width: 500px) and (max-width:899px) {
+    .container {
+        display: grid;
+      grid-template-areas: 
+        "box1 box1"
+        "box3  box3"
+        "box2 box2"
+        "box4 box4"
+        "box5 box6"
+        "box7 box8";
+      grid-template-rows: 49% 49%;
+    }
+    .box1 .box3{
+        line-height: 100px;
+    }
+    }
+  
+  
+  
+  @media only screen and (min-width: 0px) and (max-width:499px) {
+    .container {
+        display: grid;
+      grid-template-areas: 
+        "box1"
+        "box3"
+        "box2"
+        "box4"
+        "box5"
+        "box6"
+        "box7"
+        "box8";
+      grid-template-rows: 100%;
+    }
+    .box1 .box3{
+        line-height: 80%;
+    }
+  }
+  
